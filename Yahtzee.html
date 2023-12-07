@@ -2,11 +2,157 @@
 <html>
 <head>
 	<title>CSC_235_HW2_Yahtzee</title>
-	<style>
+	<style type='text/css'>
+	<!--
+	h1 {
+		text-align: center;
+	}
+	div.dice {
+		text-align: center;
+	}
+	table.body {
+		width: 100%;
+		height: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	table.left {
 	
+	}
+	table.right {
+	
+	}
+	td.label {
+		text-align: right;
+	}
+	td.box {
+		border:2px #EFEFEF inset;
+		background-color: #AEAFFF;
+		width 2em;
+	}
+	button.roll {
+		color:#F5E6E3;
+		background-color: #5F00CA;
+		margin-right: 20px;
+	}
+	button.new {
+		color:#5F00CA;
+		background-color:#F5E6E3;
+		margin-right: 20px;
+	}
+	-->
 	</style>
 </head>
+
 <body>
+	<script language="JavaScript">
+	<!--
+	
+	var v = new Array(0,0,0,0,0);
+	var h = new Array(false,false,false,false,false); //false = unclicked
+	
+	function roll()
+	{
+		if(!h[i]){
+		}
+		for(var i=0; i<5; i++)
+	{
+		d = document.getElementByID('d' + i);
+		v[i] = Math.floor(Math.random() * 6) + 1;
+		d.src = 'pix/dice'+ v[i] + '.gif';
+	}
+	
+	}
+	
+	function hold(i)
+	{
+		d=document.getElementById('d' + i);
+		h[i]=!h[i];
+		if (h[i]) {d.src='pix/diceX' + v[i] + '.gif'}
+		else (h[i]) {d.src='pix/dice' + v[i] + '.gif'}
+		d.source='pix/dicex' + v[i] + '.gif'
+	}
+	function new_game(){
+		
+	
+	}
+	function score(i)
+	{
+		d=document.getElementById('s'+i);
+		var sum = 0;
+		for(var j=0; j<5; j++)
+		{if (v[j] == i) sum += v[j];}
+		d.innerHTML=sum;
+	}
+	//-->
+	</script>
+	
+    <h1> Yahtzee </h1>
+
+    <div class='dice'>
+        <img id='d0' onClick='hold0()' src='pix/dice0.gif'>
+        <img id='d1' onClick='hold1()' src='pix/dice0.gif'>
+        <img id='d2' onClick='hold2()' src='pix/dice0.gif'>
+        <img id='d3' onClick='hold3()' src='pix/dice0.gif'>
+        <img id='d4' onClick='hold4()' src='pix/dice0.gif'>
+    </div>
+
+	<table>
+		<!-- Row 1/10 -->
+		<tr>
+			<td class='label'> 1's </td>
+			<td id = 's1' onMouseOver= 'score(1)' class='box'> </td>
+			<!-- Button 1/2 -->
+			<td rowspan='5'><button class='roll' onClick='roll()'> Roll </button></td>
+		</tr>
+		<!-- Row 2/10 -->
+		<tr> 
+			<td class='label'> 2's </td>
+			<td class='box'> </td>
+		</tr>
+		<!-- Row 3/10 -->
+		<tr>
+			<td class='label'> 3's </td>
+			<td class='box'> </td>
+		</tr>
+		<!-- Row 4/10 -->
+		<tr>
+			<td class='label'> 4's </td>
+			<td class='box'> </td>
+		</tr>
+		<!-- Row 5/10 -->
+		<tr>
+			<td class='label'> 5's </td>
+			<td class='box'> </td>
+		</tr>
+		<!-- Row 6/10 -->
+		<tr>
+			<td class='label'> 6's </td>
+			<td class='box'> </td>
+			<!-- Button 2/2 -->
+			<td rowspan='5'><button class='new' onCLick='new_game()'> New Game </button></td>
+		</tr>
+		<!-- Row 7/10 -->
+		<tr>
+			<td class='label'> 3 of a kind </td>
+			<td class='box'> </td>
+		</tr>
+		<!-- Row 8/10 -->
+		<tr>
+			<td class='label'> 4 of a kind </td>
+			<td class='box'> </td>
+		</tr>
+		<!-- Row 9/10 -->
+		<tr>
+			<td class='label'> Yahtzee </td>
+			<td class='box'> </td>
+		</tr>
+		<!-- Row 10/10 -->
+		<tr>
+			<td class='label'> Total </td>
+			<td class='box'> </td>
+		</tr>
+	</table>
 
 </body>
 </html>
