@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+
+<!--
+	Name: Anthony Eldred
+	Course:	235.01
+	HomeWork: #2
+	Git-Hub:
+-->
+
 <html>
 <head>
 	<title>CSC_235_HW2_Yahtzee</title>
@@ -14,19 +22,13 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
-	table.left {
-	
-	}
-	table.right {
-	
-	}
 	td.label {
 		text-align: right;
 	}
 	td.box {
 		border:2px #EFEFEF inset;
 		background-color: #AEAFFF;
-		width 100px;
+		width: 2em;
 	}
 	button.roll {
 		color:#F5E6E3;
@@ -48,6 +50,7 @@
 	
 	var v = new Array(0,0,0,0,0);
 	var h = new Array(false,false,false,false,false); //false = unclicked
+	var f = new Array(0,0,0,0,0,0,0); // f[1] =how many 1s
 	
 	function roll()
 	{
@@ -90,11 +93,11 @@
     <h1> Yahtzee </h1>
 
     <div class='dice'>
-        <img id='d0' onClick='hold0()' src='pix/dice0.gif'>
-        <img id='d1' onClick='hold1()' src='pix/dice0.gif'>
-        <img id='d2' onClick='hold2()' src='pix/dice0.gif'>
-        <img id='d3' onClick='hold3()' src='pix/dice0.gif'>
-        <img id='d4' onClick='hold4()' src='pix/dice0.gif'>
+        <img id='d0' onClick='hold(0)' src='pix/dice0.gif'>
+        <img id='d1' onClick='hold(1)' src='pix/dice0.gif'>
+        <img id='d2' onClick='hold(2)' src='pix/dice0.gif'>
+        <img id='d3' onClick='hold(3)' src='pix/dice0.gif'>
+        <img id='d4' onClick='hold(4)' src='pix/dice0.gif'>
     </div>
 
 	<table class='body'>
