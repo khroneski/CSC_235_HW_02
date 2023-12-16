@@ -80,9 +80,15 @@
 	function hold(i)
 	{
 		d = document.getElementById('d' + i);
-		h[i]=!h[i];
-		if (h[i]) {d.src='pix/diceX' + v[i] + '.gif'}
-		else (h[i]) {d.src='pix/dice' + v[i] + '.gif'}
+		h[i] = !h[i];
+		if (h[i])
+		{
+			d.src = 'pix/diceX' + v[i] + '.gif';
+		}
+		else
+		{
+			d.src = 'pix/dice' + v[i] + '.gif';
+		}
 	}
 
 	function score(i)
@@ -115,41 +121,41 @@
 		<!-- Row 1/10 -->
 		<tr>
 			<td class='label'> 1's </td>
-			<td class='box' id = 's1' onMouseOver= 'score(1);' onMouseOut='clr(1)'> </td>
+			<td class='box' id='s1' onMouseOver= 'score(1)' onMouseOut='clr(1)'> </td>
 			<!-- Button 1/2 -->
 			<td class = 'button' rowspan='5'><button class='roll' onClick='roll()'> Roll </button></td>
 		</tr>
 		<!-- Row 2/10 -->
 		<tr> 
 			<td class='label'> 2's </td>
-			<td class='box' id = 's2' onMouseOver= 'score(2);' onMouseOut='clr(2)'> </td>
+			<td class='box' id='s2' onMouseOver= 'score(2);' onMouseOut='clr(2)'> </td>
 		</tr>
 		<!-- Row 3/10 -->
 		<tr>
 			<td class='label'> 3's </td>
-			<td class='box id = 's3' onMouseOver= 'score(3);' onMouseOut='clr(3)''> </td>
+			<td class='box' id='s3' onMouseOver= 'score(3);' onMouseOut='clr(3)''> </td>
 		</tr>
 		<!-- Row 4/10 -->
 		<tr>
 			<td class='label'> 4's </td>
-			<td class='box' id = 's4' onMouseOver= 'score(4);' onMouseOut='clr(4)'> </td>
+			<td class='box' id='s4' onMouseOver= 'score(4);' onMouseOut='clr(4)'> </td>
 		</tr>
 		<!-- Row 5/10 -->
 		<tr>
 			<td class='label'> 5's </td>
-			<td class='box' id = 's5' onMouseOver= 'score(5);' onMouseOut='clr(5)'> </td>
+			<td class='box' id='s5' onMouseOver= 'score(5);' onMouseOut='clr(5)'> </td>
 		</tr>
 		<!-- Row 6/10 -->
 		<tr>
 			<td class='label'> 6's </td>
-			<td class='box' id = 's6' onMouseOver= 'score(6);' onMouseOut='clr(6)'> </td>
+			<td class='box' id='s6' onMouseOver= 'score(6);' onMouseOut='clr(6)'> </td>
 			<!-- Button 2/2 -->
-			<td class = 'button' rowspan='5'><button class='new' onCLick='new_game()'> New Game </button></td>
+			<td class = 'button' rowspan='5'><button class='new' onClick='new_game()'> New Game </button></td>
 		</tr>
 		<!-- Row 7/10 -->
 		<tr>
 			<td class='label'> 3 of a kind </td>
-			<td class='box' id = 's7' onMouseOver= 'score(7);' onMouseOut='clr(7)'> </td>
+			<td class='box' id='s7' onMouseOver= 'score(7);' onMouseOut='clr(7)'> </td>
 		</tr>
 		<!-- Row 8/10 -->
 		<tr>
