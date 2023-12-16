@@ -274,6 +274,17 @@
 			<td class='box' id = 'totalScore'> </td>
 		</tr>
 	</table>
+	<audio id="midiAudio" src="pix/Doom.mid" preload="auto"></audio>
 
+    <script>
+        window.onload = function()
+		{
+			var audio = document.getElementById('midiAudio');
+            audio.play().catch(function(error)
+			{
+				console.log("Audio play failed:", error);
+            });
+        };
+    </script>
 </body>
 </html>
