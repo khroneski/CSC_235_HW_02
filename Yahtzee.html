@@ -11,8 +11,6 @@
 		text-align: center;
 	}
 	table.body {
-		width: 100%;
-		height: 100%;
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -28,7 +26,7 @@
 	td.box {
 		border:2px #EFEFEF inset;
 		background-color: #AEAFFF;
-		width 2em;
+		width 100px;
 	}
 	button.roll {
 		color:#F5E6E3;
@@ -53,37 +51,39 @@
 	
 	function roll()
 	{
-		if(!h[i]){
-		}
+		f[1]=f[2]=f[3]=f[4]=f[5]=f[6]=0;
+		
 		for(var i=0; i<5; i++)
-	{
-		d = document.getElementByID('d' + i);
-		v[i] = Math.floor(Math.random() * 6) + 1;
-		d.src = 'pix/dice'+ v[i] + '.gif';
+		{
+			if(!h[i]){
+				d = document.getElementByID('d' + i);
+				v[i] = Math.floor(Math.random() * 6) + 1;
+				d.src = 'pix/dice'+ v[i] + '.gif';
+				}
+				f[v[i]]++;
+		}
 	}
-	
-	}
-	
+
 	function hold(i)
 	{
-		d=document.getElementById('d' + i);
+		d = document.getElementById('d' + i);
 		h[i]=!h[i];
 		if (h[i]) {d.src='pix/diceX' + v[i] + '.gif'}
 		else (h[i]) {d.src='pix/dice' + v[i] + '.gif'}
-		d.source='pix/dicex' + v[i] + '.gif'
 	}
-	function new_game(){
+
+	function score(i)
+	{
+		d=document.getElementById('s' + i);
+		d.innerHTML = f[i] * i;
+	}
+	
+	function new_game()
+	{
 		
 	
 	}
-	function score(i)
-	{
-		d=document.getElementById('s'+i);
-		var sum = 0;
-		for(var j=0; j<5; j++)
-		{if (v[j] == i) sum += v[j];}
-		d.innerHTML=sum;
-	}
+	
 	//-->
 	</script>
 	
@@ -97,7 +97,7 @@
         <img id='d4' onClick='hold4()' src='pix/dice0.gif'>
     </div>
 
-	<table>
+	<table class='body'>
 		<!-- Row 1/10 -->
 		<tr>
 			<td class='label'> 1's </td>
