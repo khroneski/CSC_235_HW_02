@@ -28,6 +28,7 @@
 	td.button {
 		text-align: right;
 		width: 100px;
+		padding-left: 200px;
 	}
 	td.box {
 		border:2px #EFEFEF inset;
@@ -37,12 +38,15 @@
 	button.roll {
 		color:#F5E6E3;
 		background-color: #5F00CA;
+		font-family: 'Times New Roman', Times, serif;
 		margin-right: 20px;
 	}
 	button.new {
 		color:#5F00CA;
-		background-color:#F5E6E3;
+		background-color:#A8B6B7;
+		font-family: 'Times New Roman', Times, serif;
 		margin-right: 20px;
+		white-space: nowrap;
 	}
 	-->
 	</style>
@@ -247,7 +251,7 @@
 			<td class='label'> 6's </td>
 			<td class='box' id='s6' onMouseOver='showPotentialScore(6)' onMouseOut='clearPotentialScore(6)' onClick='confirmScore(6)'> </td>
 			<!-- Button 2/2 -->
-			<td class = 'button' rowspan='5'><button class='new' onClick='new_game()'> New Game </button></td>
+			<td class = 'button' rowspan='5'><button class='new' onClick='new_game()'> New game </button></td>
 		</tr>
 		<!-- Row 7/10 -->
 		<tr>
