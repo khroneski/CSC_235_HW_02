@@ -142,14 +142,14 @@
 		scoreCell.innerHTML = calculatedScore;
 		return calculatedScore;
 	}
-	
+	/* locks potential score in and adds to total score */
 	function confirmScore(i)
 	{
 		var scoreCell = document.getElementById('s' + i);
 		scoreCell.classList.add('confirmed');
 		updateTotal();
 	}
-
+	/* updates total score */
 	function updateTotal()
 	{
 		var total = 0;
@@ -202,6 +202,8 @@
 			var scoreCell = document.getElementById('s' + j);
 			scoreCell.innerHTML = "";
 		}
+		var totalCell = document.getElementById('totalScore');
+    	totalCell.innerHTML = " ";
 	}
 	
 	//-->
