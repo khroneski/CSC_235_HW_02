@@ -57,7 +57,7 @@
 	<!--
 	
 	var v = [0,0,0,0,0];
-	var h = [false,false,false,false,false]; //f alse = unclicked
+	var h = [false,false,false,false,false]; //false = unclicked
 	var f = [0,0,0,0,0,0,0]; // f[1] =how many 1s
 	var rollCount = 0;
 
@@ -88,7 +88,7 @@
 			alert('No more rolls allowed. Start new game.')
 		}
 	}
-
+	/* Show scores on mouseOver */
 	function showPotentialScore(i)
 	{
 		var potentialScore = calculateScore(i);
@@ -276,17 +276,5 @@
 			<td class='box' id = 'totalScore'> </td>
 		</tr>
 	</table>
-	<audio id="midiAudio" src="pix/Doom.mid" preload="auto"></audio>
-
-    <script>
-        window.onload = function()
-		{
-			var audio = document.getElementById('midiAudio');
-            audio.play().catch(function(error)
-			{
-				console.log("Audio play failed:", error);
-            });
-        };
-    </script>
 </body>
 </html>
